@@ -9,7 +9,6 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        {/* Logo */}
       <div className="flex items-center gap-2">
         <DoorClosed size={32} className="text-green-700" />
         <h1 className="text-3xl font-extrabold text-green-700 tracking-tight">
