@@ -5,6 +5,7 @@ import img2 from "../images/image2.jpg";
 import img3 from "../images/image3.jpg";
 import img4 from "../images/image4.jpg";
 import img5 from "../images/image5.jpg";
+import img6 from "../images/image6.jpg"; // NEW IMAGE
 
 const Solutions = () => {
   const solutions = [
@@ -25,7 +26,7 @@ const Solutions = () => {
     }
   ];
 
-  const images = [img1, img2, img3, img4, img5];
+  const images = [img1, img2, img3, img4, img5, img6]; // UPDATED ARRAY
 
   return (
     <section id="solutions" className="py-24 px-8 bg-white relative overflow-hidden">
