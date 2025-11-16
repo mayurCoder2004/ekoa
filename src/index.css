@@ -1,2 +1,12 @@
 @import "tailwindcss";
 
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-20px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.floating-item {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.4s);
+}
