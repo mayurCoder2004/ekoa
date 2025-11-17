@@ -3,6 +3,11 @@ import metalwall from "../images/metal wall.jpg";
 import horse from "../images/horse.jpg";
 import timestand from "../images/time stand.jpg";
 import roomwall from "../images/Living Room Wall Niche Ideas.jpeg";
+import canvas from "../images/canvaspainting.jpg"
+import goldleaf from "../images/goldleaf.jpg"
+import lantern from "../images/lantern.jpg";
+import buddha from "../images/woodenbuddha.webp";
+
 
 import img1 from "../images/image1.jpg";
 import img2 from "../images/image2.jpg";
@@ -11,37 +16,69 @@ import img4 from "../images/image4.jpg";
 import img5 from "../images/image5.jpg";
 import img6 from "../images/image6.jpg";
 
+
 const Shop = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Metal Wall Art",
-      price: "₹1,499",
-      image: metalwall,
-      description: "Handcrafted metal wall art",
-    },
-    {
-      id: 2,
-      name: "Horse Standing Statue",
-      price: "₹2,999",
-      image: horse,
-      description: "Horse with uplifted legs statue",
-    },
-    {
-      id: 3,
-      name: "Time Stand",
-      price: "₹1,799",
-      image: timestand,
-      description: "Time stand decoration piece",
-    },
-    {
-      id: 4,
-      name: "Living Room Walls",
-      price: "₹999",
-      image: roomwall,
-      description: "Elegant living room wall décor",
-    },
-  ];
+const products = [
+  {
+    id: 1,
+    name: "Metal Wall Art",
+    price: "₹1,499",
+    image: metalwall,
+    description: "Handcrafted metal wall art",
+  },
+  {
+    id: 2,
+    name: "Horse Standing Statue",
+    price: "₹2,999",
+    image: horse,
+    description: "Horse with uplifted legs statue",
+  },
+  {
+    id: 3,
+    name: "Time Stand",
+    price: "₹1,799",
+    image: timestand,
+    description: "Time stand decoration piece",
+  },
+  {
+    id: 4,
+    name: "Living Room Walls",
+    price: "₹999",
+    image: roomwall,
+    description: "Elegant living room wall décor",
+  },
+
+  // ⭐ NEW ITEMS ADDED BELOW ⭐
+
+  {
+    id: 5,
+    name: "Vintage Hanging Lantern",
+    price: "₹1,299",
+    image: lantern,
+    description: "Rustic lantern perfect for ambient décor",
+  },
+  {
+    id: 6,
+    name: "Wooden Buddha Idol",
+    price: "₹1,899",
+    image: buddha,
+    description: "Hand-carved Buddha idol ",
+  },
+  {
+    id: 7,
+    name: "Abstract Canvas Painting",
+    price: "₹1,499",
+    image: canvas,
+    description: "Modern abstract wall art for stylish interiors",
+  },
+  {
+    id: 8,
+    name: "Gold Leaf Wall Frame",
+    price: "₹1,699",
+    image: goldleaf,
+    description: "Luxury gold leaf frame for home décor",
+  },
+];
 
   const images = [img1, img2, img3, img4, img5, img6];
 
