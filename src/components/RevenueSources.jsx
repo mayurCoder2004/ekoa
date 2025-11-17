@@ -17,7 +17,7 @@ const RevenueSources = () => {
   ];
 
   return (
-    <section id="revenueSources" className="py-24 px-8 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 px-8 bg-white relative overflow-hidden">
 
       {/* Soft background accents */}
       <div className="absolute w-80 h-80 bg-green-200/40 blur-3xl rounded-full top-0 left-0"></div>

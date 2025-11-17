@@ -8,7 +8,7 @@ const RevenueGrowth = () => {
   ];
 
   return (
-    <section id="revenue" className="py-24 px-8 bg-green-50 relative overflow-hidden">
+    <section id="about" className="py-24 px-8 bg-green-50 relative overflow-hidden">
 
       {/* Soft glowing background shapes */}
       <div className="absolute w-96 h-96 bg-green-300/40 blur-3xl rounded-full top-10 -right-20"></div>
