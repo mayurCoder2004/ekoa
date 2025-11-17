@@ -1,58 +1,63 @@
-import { AlertTriangle, Clock, BadgeDollarSign, Leaf, Palette, Globe2 } from "lucide-react";
+import hygine from "../images/problems/hygine.jpg";
+import time from "../images/problems/time.jpg";
+import affordability from "../images/problems/affordability.jpg";
+import eco_friendly from "../images/problems/eco_friendly.jpg";
+import culture from "../images/problems/culture.jpg";
+import globally_reach from "../images/problems/globally_reach.jpg";
 
 const Problems = () => {
   const items = [
     {
       text: "Hygiene concerns, inconsistent service quality & lack of trust.",
-      icon: <AlertTriangle className="text-green-700" size={28} />
+      image: hygine,
     },
     {
       text: "Time-consuming & fragmented décor shopping experience.",
-      icon: <Clock className="text-green-700" size={28} />
+      image: time,
     },
     {
       text: "Affordable décor often lacks quality.",
-      icon: <BadgeDollarSign className="text-green-700" size={28} />
+      image: affordability,
     },
     {
       text: "Limited access to eco-friendly & handmade décor.",
-      icon: <Leaf className="text-green-700" size={28} />
+      image: eco_friendly,
     },
     {
       text: "Lack of cultural & artistic value.",
-      icon: <Palette className="text-green-700" size={28} />
+      image: culture,
     },
     {
       text: "Growing demand for globally inspired décor items.",
-      icon: <Globe2 className="text-green-700" size={28} />
-    }
+      image: globally_reach,
+    },
   ];
 
   return (
-    <section id="problems" className="py-24 px-8 bg-green-50 relative overflow-hidden">
-      {/* Soft floating background shapes */}
-      <div className="absolute w-80 h-80 bg-green-200/40 rounded-full blur-3xl top-0 left-0"></div>
-      <div className="absolute w-96 h-96 bg-green-300/30 rounded-full blur-3xl bottom-0 right-0"></div>
-
-      {/* Heading */}
-      <h2 className="text-4xl font-extrabold mb-12 text-center text-green-900 relative z-10 tracking-tight">
+    <section id="problems" className="py-24 px-6 bg-green-50">
+      <h2 className="text-4xl font-extrabold text-center text-green-900 mb-14 tracking-tight">
         Problems We Solve
       </h2>
 
-      {/* Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
-        {items.map((item, i) => (
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {items.map((item, index) => (
           <div
-            key={i}
-            className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-green-100 flex flex-col gap-4 group"
+            key={index}
+            className="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden hover:shadow-2xl transition-all"
           >
-            <div className="bg-green-100 w-14 h-14 flex items-center justify-center rounded-xl group-hover:scale-110 transition">
-              {item.icon}
+            {/* Image Wrapper */}
+            <div className="w-full h-48 bg-gray-100 overflow-hidden">
+              <img
+                src={item.image}
+                alt="Problem"
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
             </div>
 
-            <p className="text-gray-700 text-lg leading-relaxed">
-              {item.text}
-            </p>
+            {/* Text */}
+            <div className="p-5">
+              <p className="text-gray-700 text-lg leading-relaxed">{item.text}</p>
+            </div>
           </div>
         ))}
       </div>
