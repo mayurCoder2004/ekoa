@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-green-900 text-white py-10 px-4">
+    <section id="contact"  className="bg-green-900 text-white py-10 px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-3">
 
         {/* Divider Line */}
@@ -21,7 +21,7 @@ const Footer = () => {
         {/* Subtle Bottom Blur */}
         <div className="w-full h-6 bg-gradient-to-t from-green-900 to-transparent opacity-70"></div>
       </div>
-    </footer>
+    </section>
   );
 };
 

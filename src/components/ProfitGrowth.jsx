@@ -8,7 +8,7 @@ const ProfitGrowth = () => {
   ];
 
   return (
-    <section id="profit" className="py-24 px-8 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 px-8 bg-white relative overflow-hidden">
 
       {/* Soft background glow */}
       <div className="absolute w-96 h-96 bg-green-200/50 blur-3xl rounded-full top-0 -right-20"></div>

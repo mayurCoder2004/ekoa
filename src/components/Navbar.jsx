@@ -11,7 +11,7 @@ const Navbar = () => {
     }
   };
 
-  const menuItems = ["Shop", "Mission", "Solutions", "Revenue", "Contact"];
+  const menuItems = ["Shop", "Mission", "Solutions", "About", "Contact"];
 
   return (
     <nav className="fixed top-0 w-full bg-white/70 backdrop-blur-lg shadow-md z-50">
