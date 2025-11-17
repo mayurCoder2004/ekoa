@@ -4,6 +4,13 @@ import horse from "../images/horse.jpg";
 import timestand from "../images/time stand.jpg";
 import roomwall from "../images/Living Room Wall Niche Ideas.jpeg";
 
+import img1 from "../images/image1.jpg";
+import img2 from "../images/image2.jpg";
+import img3 from "../images/image3.jpg";
+import img4 from "../images/image4.jpg";
+import img5 from "../images/image5.jpg";
+import img6 from "../images/image6.jpg";
+
 const Shop = () => {
   const products = [
     {
@@ -15,10 +22,10 @@ const Shop = () => {
     },
     {
       id: 2,
-      name: "Horse Standing statue",
+      name: "Horse Standing Statue",
       price: "₹2,999",
       image: horse,
-      description: "Horse with Uplifted Legs statue",
+      description: "Horse with uplifted legs statue",
     },
     {
       id: 3,
@@ -29,12 +36,14 @@ const Shop = () => {
     },
     {
       id: 4,
-      name: "Living Room walls",
+      name: "Living Room Walls",
       price: "₹999",
       image: roomwall,
       description: "Elegant living room wall décor",
     },
   ];
+
+  const images = [img1, img2, img3, img4, img5, img6];
 
   const [quantities, setQuantities] = useState({});
 
@@ -48,16 +57,35 @@ const Shop = () => {
   const handleBuyClick = (productName, quantity) => {
     alert(`Added ${quantity} "${productName}" to cart!`);
   };
+
   return (
     <section
       id="shop"
       className="py-24 px-8 bg-linear-to-b from-white to-green-50 relative overflow-hidden">
-      {/* Decorative background elements */}
       <div className="absolute top-10 right-10 w-40 h-40 bg-green-200/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-40 h-40 bg-green-200/20 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header */}
+        {/* Showcase FIRST */}
+        <h3 className="text-3xl font-semibold text-green-800 mb-6 text-center">
+          Our Handcrafted Décor Showcase
+        </h3>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
+              <img
+                src={src}
+                className="w-full h-64 object-cover hover:scale-110 transition-all duration-500"
+                alt={`decor-${i}`}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Shop SECTION AFTER Showcase */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-4 tracking-tight">
             Our Shop
@@ -74,7 +102,6 @@ const Shop = () => {
             <div
               key={product.id}
               className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              {/* Product Image Container */}
               <div className="relative overflow-hidden bg-gray-200 h-48">
                 <img
                   src={product.image}
@@ -83,7 +110,6 @@ const Shop = () => {
                 />
               </div>
 
-              {/* Product Info */}
               <div className="p-4">
                 <h3 className="text-base font-semibold text-gray-900 mb-1">
                   {product.name}
@@ -95,16 +121,17 @@ const Shop = () => {
                   {product.price}
                 </p>
 
-                {/* Quantity Control and Buy Button */}
                 <div className="flex items-center gap-2 mb-2">
                   <button
                     onClick={() => handleQuantityChange(product.id, -1)}
                     className="px-2 py-1 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 font-semibold text-sm">
                     −
                   </button>
+
                   <span className="flex-1 text-center font-semibold text-gray-900 text-sm">
                     {quantities[product.id] || 1}
                   </span>
+
                   <button
                     onClick={() => handleQuantityChange(product.id, 1)}
                     className="px-2 py-1 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 font-semibold text-sm">
